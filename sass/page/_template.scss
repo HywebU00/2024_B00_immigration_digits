@@ -1,0 +1,207 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  &.noscroll {
+    position: static !important;
+    width: 100%;
+    height: 100%;
+    overflow: hidden !important;
+    overflow-y: hidden !important;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+// 最外圍預設為100%
+.wrapper {
+  width: 100%;
+  margin: 0px auto;
+
+  @include screen('mobile') {
+    padding-top: 60px;
+    background: #fff;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+  &.loginpage {
+    background-image: url('../images/loginbg.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// 整體共用container樣式，請注意首頁切版頁面的整齊
+.container {
+  padding: 0;
+  margin: 0 auto;
+  max-width: $container-max; //請看_variable.scss
+}
+
+.main {
+  position: relative;
+  margin: 0 auto;
+
+  // 可先設定一個中央區塊最大寬，限制accesskey對齊
+  h2.title {
+    line-height: 1.25em;
+    font-size: 2.5em;
+    color: $primaryColor;
+    margin: 1em 0;
+    text-align: center;
+  }
+}
+
+////////////////////////////////////////////////////////////
+// 為了與首頁區隔，請在內頁加上innerpage ClassName
+.innerpage {
+  background-image: url('../images/contentin_block_bg.jpg');
+  background-position: center bottom;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  > .container {
+    @include gutter(); //gutter 代表左右要留白
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .center_block {
+    flex: none;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .left_block {
+    flex: none;
+    flex-basis: 260px;
+    max-width: 260px;
+    margin-right: 40px;
+
+    &.stickySidebar {
+      position: sticky;
+      top: 50px;
+    }
+
+    &.hidden {
+      + .center_block {
+        flex: none;
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+    }
+
+    + .center_block {
+      flex: auto;
+      flex-basis: calc(100% - 300px);
+      max-width: calc(100% - 300px);
+    }
+
+    @include screen('tablet') {
+      display: none;
+
+      + .center_block {
+        flex: none;
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+
+  &.small_size {
+    font-size: 0.938em;
+  }
+
+  &.large_size {
+    font-size: 1.125em;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+// login
+.loginblock {
+  width: 544px;
+  padding: 20px 50px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid #fff;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 15px 0px;
+  margin: 6% auto 40px;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 1.25rem;
+
+  .flex-form {
+    .form_grp {
+      border: none;
+      .form_title {
+        flex: 0 0 auto;
+        max-width: 0;
+        font-size: 0;
+      }
+      .form_content {
+        max-width: 100%;
+        flex-basis: 100%;
+        .btn {
+          padding: 0;
+          background: transparent;
+          border: none;
+          min-width: auto;
+          margin: 0;
+          font-size: 1.375em;
+          .i_reflash:before {
+            background: url(../images/icon/icon_reflash_bule.svg) center center no-repeat;
+          }
+        }
+        .input_verification {
+          width: 50%;
+        }
+      }
+    }
+    .btn_grp {
+      input {
+        &.btn {
+          box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 16px;
+        }
+      }
+    }
+  }
+
+  @include screen('xs_mobile') {
+    width: 80%;
+    padding: 20px 30px;
+    margin: 0% auto 40px;
+    .flex-form {
+      .form_content {
+        .input_verification {
+          width: calc(100% - 0.6em);
+        }
+      }
+    }
+  }
+}
+// 內頁
+.main {
+  .center_block {
+    .breadcrumb,
+    h2.title {
+      + .contentin_block {
+        margin: 0 0 60px;
+      }
+    }
+  }
+}
