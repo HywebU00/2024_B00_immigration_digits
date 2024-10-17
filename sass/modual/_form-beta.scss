@@ -1688,7 +1688,7 @@ abbr[title] {
     background-size: 20px;
     font-size: 0;
     border-radius: 50%;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 4px, rgba(0, 0, 0, 0.23) 0px 3px 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     &:hover {
       background-color: lighten($color: $linkColor, $amount: 10);
       box-shadow: none;
@@ -1710,7 +1710,7 @@ abbr[title] {
     background-size: 20px 5px;
     font-size: 0;
     border-radius: 50%;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 4px, rgba(0, 0, 0, 0.23) 0px 3px 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     &:hover {
       background-color: lighten($color: $color-red, $amount: 10);
       box-shadow: none;
