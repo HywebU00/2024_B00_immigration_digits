@@ -224,9 +224,8 @@ select::-ms-expand {
   color: $color-red;
   padding: 0px 6px 2px;
   border-radius: 2px;
-  margin: 0 6px 0 0;
+  margin: 0 6px 0 -2em;
   font-weight: bold;
-
   // box-shadow: 0 0 0 1px $color-red inset;
 }
 
@@ -410,19 +409,22 @@ select::-ms-expand {
     .form_title {
       // padding: 18px 0;
       color: darken($primaryColor, 10);
-      font-weight: 500;
+      font-weight: 600;
     }
   }
   .form_title {
     max-width: $form_title_width;
     flex: 0 0 $form_title_width;
     align-self: flex-start;
-    // padding: .65em 1em;
-    padding: 0.65em 0;
+    padding: 0.65em 0.5em 0.65em 0;
     font-weight: 500;
     color: darken($primaryColor, 10);
+    line-height: 1.5em;
     //white-space: nowrap;
-    @include screen('mobile') {
+    &:has(> .necessary) {
+      padding: 0.65em 0.5em 0.65em 1em;
+    }
+    @include screen('xs_mobile') {
       max-width: calc(100% - 0.6em);
       flex-basis: calc(100% - 0.6em);
       margin: 0 0.3em;
@@ -433,7 +435,7 @@ select::-ms-expand {
         flex-basis: calc(100% - #{$form_title_width});
         max-width: calc(100% - #{$form_title_width});
         padding-top: 0;
-        @include screen('mobile') {
+        @include screen('xs_mobile') {
           flex-basis: 100%;
           max-width: 100%;
         }
@@ -458,7 +460,7 @@ select::-ms-expand {
       // background: pink;
       width: 100%;
     }
-    @include screen('mobile') {
+    @include screen('xs_mobile') {
       max-width: 100%;
       flex-basis: 100%;
       @include gutter(0);
@@ -593,9 +595,14 @@ select::-ms-expand {
   .flex-col-equal-2 {
     > .form_grp {
       @include flex-xs-equal(1, 0px);
-      @include flex-sm-equal(2, $m-gutter);
+      @include flex-sm-equal(1, 0px);
       @include flex-md-equal(2, $m-gutter);
       @include flex-lg-equal(2, $m-gutter);
+      padding: 0;
+      @include screen('tablet') {
+        border-bottom: 1px dashed #ddd;
+        padding: 0.3em 0;
+      }
     }
   }
   .flex-col-equal-3 {
@@ -1234,7 +1241,7 @@ select::-ms-expand {
   input[type='search'],
   .input-i {
     width: auto;
-    flex: 0 0 auto;
+    flex: 1 0 auto;
   }
   .form_grp,
   .check_grp,
@@ -1386,7 +1393,7 @@ input[type='submit'] {
 
 textarea {
   @include formStyle();
-  height: 5em;
+  height: 4em;
   overflow-y: scroll;
   border-radius: 8px;
   border: 2px solid #e9e9e9;
@@ -1504,13 +1511,13 @@ input[type='checkbox']:focus {
   position: relative;
   input[readonly],
   input[disable] {
-    background: transparent;
+    background: #fff;
     color: #666;
   }
   .upload_btn {
     position: absolute;
     overflow: hidden;
-    top: 10px;
+    top: 4px;
     right: 0.5em;
     @extend %btn;
     @include btn_setting($form-focus, #fff);
@@ -1533,6 +1540,7 @@ input[type='file'] {
   cursor: pointer;
   opacity: 0;
   filter: alpha(opacity=0);
+  background-color: #fff;
 }
 
 //---------------------------------------------錯誤--------//
@@ -1661,5 +1669,50 @@ abbr[title] {
   100% {
     opacity: 0;
     transform: scale(3.5);
+  }
+}
+
+.addition_icon {
+  flex: 0 0 auto;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    background-color: $linkColor;
+    background-image: url('../images/icon/icon_add2.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+    font-size: 0;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 4px, rgba(0, 0, 0, 0.23) 0px 3px 4px;
+    &:hover {
+      background-color: lighten($color: $linkColor, $amount: 10);
+      box-shadow: none;
+    }
+  }
+}
+.delete_icon {
+  flex: 0 0 auto;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    background-color: $color-red;
+    background-image: url('../images/icon/icon_minus2.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px 5px;
+    font-size: 0;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 4px, rgba(0, 0, 0, 0.23) 0px 3px 4px;
+    &:hover {
+      background-color: lighten($color: $color-red, $amount: 10);
+      box-shadow: none;
+    }
   }
 }

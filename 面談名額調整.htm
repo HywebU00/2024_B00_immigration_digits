@@ -166,87 +166,127 @@
           <div class="breadcrumb">
             <ul>
               <li><a href="#">首頁</a></li>
-              <li><a href="#">面(訪)談紀錄登錄</a></li>
-              <li>查詢新增</li>
+              <li><a href="#">面(訪)名額調整</a></li>
+
             </ul>
           </div>
           <!-- h2節點 -->
-          <h2 class="title">面(訪)談登錄－新增</h2>
+          <h2 class="title">面(訪)名額調整設定</h2>
           <div class="contentin_block">
             <!-- ap Start -->
             <section class="ap">
               <div class="searchform havenext">
                 <form action="">
                   <div class="flex-form formbg">
+                    <!-- １ -->
                     <div class="form_grp">
+                      <label for="fake-legend" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">＊</abbr>面(訪)名額名稱</label>
+                      <div class="form_content">
+                        <input type="text" id="fake-legend" placeholder="2004年國境面談名額" />
+                      </div>
+                    </div>
+                    <!-- 2 -->
+                    <div class="form_grp">
+                      <label for="fake-legend" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">＊</abbr>面(訪)談類別</label>
+                      <div class="form_content">
+                        <select name="" id="fake-legend">
+                          <option value="">請選擇</option>
+                          <option value="">國境面談</option>
+                          <option value="">入境前面談</option>
+                        </select>
+                      </div>
+                    </div>
+                    <!-- 3 -->
+                    <div class="form_grp">
+                      <label for="fake-legend" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">＊</abbr>面(訪)名額日期起迄</label>
+                      <div class="form_content form_inline">
+                        <div class="datepick">
+                          <input name="" type="date" value="" class="calendar" placeholder="開始日期" />
+                        </div>
+                        <div class="datepick">
+                          <input name="" type="date" value="" class="calendar" placeholder="結束日期" />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 4 -->
+                    <div class="form_grp">
+                      <label for="fake-legend" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">＊</abbr>面(訪)假日設定</label>
+                      <div class="form_content" id="fake-legend">
+                        <div class="radio_grp form_inline">
+                          <label><input type="radio" name="sampleRadio" value="" checked="" />含假日</label>
+                          <label><input type="radio" name="sampleRadio" value="" />不包含假日</label>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 5 -->
+                    <div class="form_grp">
+                      <label for="fake-legend" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">＊</abbr>面(訪)單位</label>
+                      <div class="form_content" id="fake-legend">
+                        <div class="check_grp form_inline">
+                          <label><input type="checkbox" name="" value="" checked="" />桃園一航廈</label>
+                          <label><input type="checkbox" name="" value="" />桃園二航廈</label>
+                          <label><input type="checkbox" name="" value="" />松山機場</label>
+                          <label><input type="checkbox" name="" value="" />臺中機場</label>
+                          <label><input type="checkbox" name="" value="" />高雄機場</label>
+                          <label><input type="checkbox" name="" value="" />金門水頭港</label>
+                          <label><input type="checkbox" name="" value="" />馬祖福澳港(南竿)</label>
+                          <label><input type="checkbox" name="" value="" />北竿白沙港</label>
+                          <label><input type="checkbox" name="" value="" />臺南機場</label>
+                        </div>
+                      </div>
+                    </div>
+                    <!--  -->
+                  </div>
+                  <div class="flex-form formbg">
+                    <!-- 1 -->
+                    <div class="form_grp">
+                      <!-- 使用aria-required屬性指出必填的表單欄位 -->
                       <div class="flex-col-equal-2">
                         <div class="form_grp">
-                          <label for="fake-legend" class="form_title">面(訪)談類別</label>
+                          <label for="fake-legend" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">＊</abbr>08:00 - 10:00</label>
                           <div class="form_content">
-                            入境前面談
+                            <input type="text" id="fake-legend" placeholder="2" />
                           </div>
                         </div>
                         <div class="form_grp">
-                          <label for="fake-legend" class="form_title">面(訪)談預約時間</label>
+                          <label for="fake-legend" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">＊</abbr>10:00 - 12:00</label>
                           <div class="form_content">
-                            2024/07/02 10:00-12:00
+                            <input type="text" id="fake-legend" placeholder="2" />
                           </div>
                         </div>
                       </div>
                     </div>
+                    <!-- 2 -->
                     <div class="form_grp">
                       <div class="flex-col-equal-2">
                         <div class="form_grp">
-                          <label for="fake-legend" class="form_title">面(訪)談案號</label>
+                          <label for="fake-legend" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">＊</abbr>12:00 - 14:00</label>
                           <div class="form_content">
-                            113500000010
+                            <input type="text" id="fake-legend" placeholder="2" />
                           </div>
                         </div>
                         <div class="form_grp">
-                          <label for="fake-legend" class="form_title">統一編號</label>
+                          <label for="fake-legend" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">＊</abbr>14:00 - 16:00</label>
                           <div class="form_content">
-                            A990001967
+                            <input type="text" id="fake-legend" placeholder="2" />
                           </div>
                         </div>
                       </div>
                     </div>
+                    <!-- 3 -->
                     <div class="form_grp">
                       <div class="flex-col-equal-2">
                         <div class="form_grp">
-                          <label for="fake-legend" class="form_title">收件號</label>
+                          <label for="fake-legend" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">＊</abbr>16:00 - 18:00</label>
                           <div class="form_content">
-                            113530000020
+                            <input type="text" id="fake-legend" placeholder="2" />
                           </div>
                         </div>
                         <div class="form_grp">
-                          <label for="fake-legend" class="form_title">性別</label>
+                          <label for="fake-legend" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">＊</abbr>18:00 - 20:00</label>
                           <div class="form_content">
-                            女
+                            <input type="text" id="fake-legend" placeholder="2" />
                           </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form_grp">
-                      <div class="flex-col-equal-2">
-                        <div class="form_grp">
-                          <label for="fake-legend" class="form_title">姓名</label>
-                          <div class="form_content">
-                            團聚二
-                          </div>
-                        </div>
-                        <div class="form_grp">
-                          <label for="fake-legend" class="form_title">出生日期</label>
-                          <div class="form_content">
-                            1997/07/01
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form_grp">
-                      <div class="form_grp">
-                        <label for="fake-legend" class="form_title">國籍</label>
-                        <div class="form_content">
-                          中國大陸
                         </div>
                       </div>
                     </div>
@@ -254,38 +294,14 @@
                   </div>
                   <!--  -->
                   <div class="btn_grp ">
-                    <button type="button" class="btn btn-blue">上一頁</button>
-                    <button type="button" class="btn btn-blue">新增面談紀錄</button>
-                    <button type="button" class="btn btn-submit">送出</button>
-                    <button type="button" class="btn btn-reset">取消</button>
+                    <button type="button" class="btn btn-submit">設定</button>
+                    <button type="button" class="btn btn-reset">清除</button>
                   </div>
                   <!--  -->
                 </form>
               </div>
-              <!-- 表格 -->
-              <div class="table_list">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>項次</th>
-                      <th>對象</th>
-                      <th width="20%">操作</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="num">01</td>
-                      <td>臺灣配偶+大陸配偶(電訪)</td>
-                      <td class="aCenter"><button type="button" class="btn btn-green">編輯</button><button type="button" class="btn btn-red">刪除</button></td>
-                    </tr>
-                    <tr>
-                      <td class="num">02</td>
-                      <td>臺灣配偶+大陸配偶(電訪)</td>
-                      <td class="aCenter"><button type="button" class="btn btn-green">編輯</button><button type="button" class="btn btn-red">刪除</button></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+
+              <!--  -->
             </section>
             <!--ap End -->
           </div>

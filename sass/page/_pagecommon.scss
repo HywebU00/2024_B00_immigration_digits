@@ -9,7 +9,7 @@
   margin: 60px 0;
 }
 .sectitle {
-  font-size: 1.75rem;
+  font-size: 1.625rem;
   color: $primaryColor;
   font-weight: bold;
   margin: 1em 0;
@@ -27,9 +27,11 @@
     top: 3px;
   }
 }
+// 查詢form
 .searchform {
-  font-size: 1.375rem;
+  font-size: 1.25rem;
   margin: 0;
+
   &.havenext {
     margin: 0 0 1em;
   }
@@ -60,7 +62,7 @@
   }
   .formbg {
     background-color: #f4f4f4;
-    border-radius: 10px;
+    border-radius: 8px;
     padding: 1em 2em;
   }
   .btn_grp {
@@ -72,6 +74,7 @@
     }
   }
 }
+// 問答Tb
 .dataQA_block {
   padding: 0.5em 0;
   .btngroup {
@@ -92,9 +95,433 @@
   text-align: center;
   padding: 2em 0 0;
   display: block;
-  font-size: 1.375rem;
+  font-size: 1.25rem;
   .btn {
     min-width: 6em;
     letter-spacing: 0.05em;
   }
 }
+// 處理登錄
+.handlelogin_block {
+  display: flex;
+  justify-content: space-between;
+  .handlelogin_leftblock {
+    flex: 0 0 auto;
+    flex-basis: 49%;
+    // outline: 1px solid red;
+  }
+  .handlelogin_rightblock {
+    flex: 0 0 auto;
+    flex-basis: 48%;
+    // outline: 1px solid red;
+    .form_title {
+      max-width: 240px;
+      flex: 0 0 240px;
+    }
+    .form_content {
+      max-width: calc(100% - 240px);
+      flex-basis: calc(100% - 240px);
+    }
+  }
+  @media (max-width: 1500px) {
+    .flex-col-equal-2 {
+      > .form_grp {
+        flex-basis: calc(100% / 1 - 0px);
+        max-width: calc(100% / 1 - 0px);
+        border-bottom: 1px dashed #ddd;
+        padding: 0.3em 0;
+      }
+    }
+  }
+  @media (max-width: 1150px) {
+    .flex-form {
+      .form_title,
+      .form_content {
+        max-width: 100%;
+        flex: 0 0 100%;
+      }
+    }
+  }
+  .Tb_bg {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 1em;
+    // border: 1px solid #ddd;
+    th {
+      background-color: rgb(169, 216, 250);
+    }
+    td {
+      &.numtd {
+        padding-left: 2.2em;
+        span {
+          margin-left: -2em;
+          width: 1.7em;
+          display: inline-block;
+          text-align: right;
+          margin-right: 0.3em;
+        }
+      }
+    }
+  }
+}
+
+// 受訪者
+.interviewee_group {
+  display: flex;
+  margin-bottom: 0.5em;
+  &:last-of-type {
+    margin: 0;
+  }
+}
+// 面談紀錄問答
+.qa_group {
+  .qalist {
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 0 0 0.3em;
+    border: 1px solid #eee;
+    .question {
+      background-color: #f4f4f4;
+      color: $primaryColor;
+      padding: 0.5em;
+      border-radius: 8px 8px 0 0;
+      font-weight: 500;
+      span {
+        width: 1.5em;
+        text-align: center;
+        display: inline-block;
+        background-color: $primaryColor;
+        border-radius: 5px;
+        margin-right: 8px;
+        font-weight: normal;
+        color: #fff;
+        font-size: 1.125rem;
+      }
+    }
+    .answer {
+      color: #333;
+      padding: 0.5em 0.5em 0.5em 2.5em;
+    }
+  }
+}
+.interviewdate_title {
+  padding-top: 1em;
+  h3 {
+    text-align: center;
+    font-size: 1.75rem;
+    color: $primaryColor;
+    span {
+      display: inline-block;
+      padding-bottom: 0.5em;
+      border-bottom: 3px solid $primaryColor;
+    }
+  }
+  p {
+    text-align: center;
+    font-size: 1.25rem;
+  }
+}
+// 年月份 月曆 start
+.interviewdate_calendar {
+  background: rgb(195, 234, 251);
+  background: linear-gradient(45deg, rgba(195, 234, 251, 1) 0%, rgba(231, 247, 212, 1) 100%);
+  border-radius: 8px;
+  padding: 3px 2em 2em;
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto 2em;
+  // box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+// 週曆
+.interviewdate_weeklycalendar {
+  background: rgb(195, 234, 251);
+  background: linear-gradient(45deg, rgba(195, 234, 251, 1) 0%, rgba(231, 247, 212, 1) 100%);
+  border-radius: 8px;
+  padding: 3px 2em 2em;
+  font-size: 1.25rem;
+  max-width: 1400px;
+  margin: 0 auto 2em;
+  // box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.year_month_block {
+  text-align: center;
+  margin: 40px 0;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .year_month {
+    flex: 1 1 auto;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    font-size: 2.25rem;
+    color: #333;
+    span {
+      color: $color-orange;
+      padding: 0 10px;
+    }
+  }
+  // 選擇時段
+  .timeperiod {
+    flex: 1 1 auto;
+    color: $primaryColor;
+    font-size: 1.75rem;
+    font-weight: bold;
+  }
+  .prev_btn {
+    flex: 0 0 auto;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.375rem;
+    a {
+      display: block;
+      color: #333;
+      position: relative;
+      padding: 16px 0 5px 70px;
+      &:before {
+        content: '';
+        width: 56px;
+        height: 56px;
+        background-color: #666;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: 0.5s;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      &:after {
+        content: '';
+        border: 4px solid #fff;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        left: 22px;
+        top: 47%;
+        border-right: none;
+        border-bottom: none;
+        transform: rotate(-45deg);
+      }
+
+      &:hover {
+        color: #000;
+        &:before {
+          background-color: #000;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+  .next_btn {
+    flex: 0 0 auto;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.375rem;
+    a {
+      display: block;
+      color: #333;
+      position: relative;
+      padding: 16px 70px 5px 0;
+      &:before {
+        content: '';
+        width: 56px;
+        height: 56px;
+        background-color: #666;
+        border-radius: 50%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      &:after {
+        content: '';
+        border: 4px solid #fff;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        right: 22px;
+        top: 47%;
+        border-right: none;
+        border-bottom: none;
+        transform: rotate(135deg);
+      }
+
+      &:hover {
+        color: #000;
+        &:before {
+          background-color: #000;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
+// 日曆calendar_Tb
+.calendar_Tb {
+  table {
+    word-break: break-all;
+    table-layout: fixed;
+    border: none;
+    background-color: transparent;
+
+    thead {
+      margin-bottom: 5px;
+    }
+    tbody {
+    }
+    tr {
+    }
+
+    th {
+      color: #333;
+      padding: 0.2em;
+      border: 1px solid transparent;
+      background-color: transparent;
+      font-size: 1.375rem;
+      span {
+        padding: 0.8em 0.5em;
+        border-radius: 8px;
+        display: block;
+        background-color: #fff;
+      }
+      &.weekend {
+        // background-color: #f66f62 !important;
+        // color: #fff;
+      }
+    }
+    td {
+      position: relative;
+      border: 1px solid transparent;
+      padding: 0.2em;
+      .num_date {
+        a {
+          display: block;
+          background-color: darken($color: $primaryColor, $amount: 5);
+          border-radius: 8px;
+          color: #fff;
+          padding: 0.5em;
+          text-align: center;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 4px, rgba(0, 0, 0, 0.23) 0px 3px 4px;
+          &:hover {
+            background-color: lighten($color: $primaryColor, $amount: 10);
+            box-shadow: none;
+          }
+        }
+      }
+      &.othermonth {
+        .num_date {
+          a {
+            background-color: #ccc;
+            color: #999;
+            cursor: not-allowed;
+            box-shadow: none;
+          }
+        }
+      }
+      &.today {
+        .num_date {
+          a {
+            box-shadow: 0 0 0 3px $color-yellow inset;
+          }
+        }
+      }
+      &.alreadyfull {
+        .num_date {
+          a {
+            background-color: darken($color: $primaryColor, $amount: 15);
+            color: #666;
+            cursor: not-allowed;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 週曆
+.weeklycalendar_block {
+  display: flex;
+  overflow-x: auto;
+  .time_interval,
+  .dategroup {
+    flex: 0 0 auto;
+    flex-basis: calc(100% / 8);
+    padding: 8px 8px;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      li {
+        margin-bottom: 0.4em;
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0.8em 0.6em;
+          background-color: darken($color: $primaryColor, $amount: 5);
+          border-radius: 8px;
+          color: #fff;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 4px, rgba(0, 0, 0, 0.23) 0px 3px 4px;
+          &:hover {
+            background-color: lighten($color: $primaryColor, $amount: 10);
+            box-shadow: none;
+          }
+        }
+        &.alreadyfull {
+          a {
+            background-color: darken($color: $primaryColor, $amount: 15);
+            color: #666;
+            cursor: not-allowed;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+  .time_interval {
+    ul {
+      li {
+        padding: 0.8em 0.6em;
+        white-space: nowrap;
+        background-color: #fff;
+        color: #000;
+        border-radius: 8px;
+        text-align: center;
+        &:first-child {
+          height: 4.3em;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+  .dategroup {
+    &:hover {
+      background-color: $color-yellow;
+      border-radius: 8px;
+    }
+    ul {
+      li {
+        &:first-child {
+          padding: 0.8em 0.6em;
+          background-color: #fff;
+          text-align: center;
+          border-radius: 8px;
+          font-weight: bold;
+          height: 4.3em;
+          span {
+            display: block;
+            padding-top: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+// 督導稽核

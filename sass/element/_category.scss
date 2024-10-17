@@ -2,7 +2,7 @@
   @extend %clearfix;
   text-align: left;
   margin: 1em auto 2em;
-  font-size: 1.375em;
+  font-size: 1.25rem;
   ul {
     @include li-reset;
     li {
