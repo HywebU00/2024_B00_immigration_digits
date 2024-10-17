@@ -6883,17 +6883,17 @@ abbr[title] {
   align-items: center;
   width: 36px;
   height: 36px;
-  background-color: #0097e5;
+  background-color: #1f8523;
   background-image: url("../images/icon/icon_add2.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 20px;
+  background-size: 16px;
   font-size: 0;
   border-radius: 50%;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 .addition_icon a:hover {
-  background-color: #19b1ff;
+  background-color: #29ae2e;
   box-shadow: none;
 }
 
@@ -6910,7 +6910,7 @@ abbr[title] {
   background-image: url("../images/icon/icon_minus2.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 20px 5px;
+  background-size: 16px 5px;
   font-size: 0;
   border-radius: 50%;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
