@@ -1764,8 +1764,8 @@ kbd kbd {
   border: 1px solid transparent;
   color: #222;
   border-left: 1px solid #e0e0e0;
-  background: #ededed;
-  background: linear-gradient(to right, #ededed, #bababa);
+  background: #e0e0e0;
+  background: linear-gradient(to right, #e0e0e0, #bababa);
   text-shadow: none;
 }
 .btn:hover {
@@ -1802,8 +1802,8 @@ kbd kbd {
   border: 1px solid transparent;
   color: #fff;
   border-left: 1px solid #59b33f;
-  background: #66c04c;
-  background: linear-gradient(to right, #66c04c, #3d7a2b);
+  background: #59b33f;
+  background: linear-gradient(to right, #59b33f, #3d7a2b);
 }
 .btn-green:hover {
   background: #59b33f;
@@ -1834,8 +1834,8 @@ kbd kbd {
   border: 1px solid transparent;
   color: #fff;
   border-left: 1px solid #0097e5;
-  background: #00a8ff;
-  background: linear-gradient(to right, #00a8ff, #006599);
+  background: #0097e5;
+  background: linear-gradient(to right, #0097e5, #006599);
 }
 .btn-blue:hover {
   background: #0097e5;
@@ -1866,8 +1866,8 @@ kbd kbd {
   border: 1px solid transparent;
   color: #333;
   border-left: 1px solid #fec61c;
-  background: #fecd36;
-  background: linear-gradient(to right, #fecd36, #cd9b01);
+  background: #fec61c;
+  background: linear-gradient(to right, #fec61c, #cd9b01);
 }
 .btn-yellow:hover {
   background: #fec61c;
@@ -1898,8 +1898,8 @@ kbd kbd {
   border: 1px solid transparent;
   color: #fff;
   border-left: 1px solid #d04500;
-  background: #ea4d00;
-  background: linear-gradient(to right, #ea4d00, #842c00);
+  background: #d04500;
+  background: linear-gradient(to right, #d04500, #842c00);
 }
 .btn-orange:hover {
   background: #d04500;
@@ -1930,8 +1930,8 @@ kbd kbd {
   border: 1px solid transparent;
   color: #fff;
   border-left: 1px solid #d30000;
-  background: #ed0000;
-  background: linear-gradient(to right, #ed0000, #870000);
+  background: #d30000;
+  background: linear-gradient(to right, #d30000, #870000);
 }
 .btn-red:hover {
   background: #d30000;
@@ -1962,8 +1962,8 @@ kbd kbd {
   border: 1px solid transparent;
   color: #fff;
   border-left: 1px solid #8c248d;
-  background: #a029a2;
-  background: linear-gradient(to right, #a029a2, #501550);
+  background: #8c248d;
+  background: linear-gradient(to right, #8c248d, #501550);
 }
 .btn-purple:hover {
   background: #8c248d;
@@ -1994,8 +1994,8 @@ kbd kbd {
   border: 1px solid transparent;
   color: #333;
   border-left: 1px solid #ccc;
-  background: #d9d9d9;
-  background: linear-gradient(to right, #d9d9d9, #a6a6a6);
+  background: #cccccc;
+  background: linear-gradient(to right, #cccccc, #a6a6a6);
 }
 .btn-white:hover {
   background: #ccc;
@@ -2026,8 +2026,8 @@ kbd kbd {
   border: 1px solid transparent;
   color: #fff;
   border-left: 1px solid #0097e5;
-  background: #00a8ff;
-  background: linear-gradient(to right, #00a8ff, #006599);
+  background: #0097e5;
+  background: linear-gradient(to right, #0097e5, #006599);
 }
 .btn-submit:hover {
   background: #0097e5;
@@ -2058,8 +2058,8 @@ kbd kbd {
   border: 1px solid transparent;
   color: #333;
   border-left: 1px solid #f6f6f6;
-  background: white;
-  background: linear-gradient(to right, white, #d0d0d0);
+  background: #f6f6f6;
+  background: linear-gradient(to right, #f6f6f6, #d0d0d0);
 }
 .btn-reset:hover {
   background: #f6f6f6;
@@ -2093,8 +2093,8 @@ kbd kbd {
   border: 1px solid transparent;
   color: #fff;
   border-left: 1px solid #0059ad;
-  background: #0066c6;
-  background: linear-gradient(to right, #0066c6, #003260);
+  background: #0059ad;
+  background: linear-gradient(to right, #0059ad, #003260);
 }
 .btn-search:hover {
   background: #0059ad;
@@ -6733,8 +6733,8 @@ input[type=checkbox]:focus {
   border: 1px solid transparent;
   color: #000;
   border-left: 1px solid #ddd;
-  background: #eaeaea;
-  background: linear-gradient(to right, #eaeaea, #b7b7b7);
+  background: #dddddd;
+  background: linear-gradient(to right, #dddddd, #b7b7b7);
   padding: 0.2em 1em !important;
   border-radius: 4px;
 }
