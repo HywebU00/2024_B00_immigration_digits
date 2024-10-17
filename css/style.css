@@ -1751,7 +1751,7 @@ kbd kbd {
   padding: 0.3em 1.25em;
   min-width: 4em;
   margin: 0.25em 0.1em;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   font-size: 1.25rem;
 }
 .upload_grp .upload_btn i, .btn i {
@@ -10230,7 +10230,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   left: 0;
   top: 0;
   transition: 0.5s;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 .year_month_block .prev_btn a:after {
   content: "";
@@ -10272,7 +10272,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   position: absolute;
   right: 0;
   top: 0;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 .year_month_block .next_btn a:after {
   content: "";
