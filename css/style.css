@@ -6729,40 +6729,41 @@ input[type=checkbox]:focus {
   overflow: hidden;
   top: 4px;
   right: 0.5em;
-  background: #004c93;
+  background: #ddd;
   border: 1px solid transparent;
-  color: #fff;
-  border-left: 1px solid #004c93;
-  background: #0059ad;
-  background: linear-gradient(to right, #0059ad, #002447);
+  color: #000;
+  border-left: 1px solid #ddd;
+  background: #eaeaea;
+  background: linear-gradient(to right, #eaeaea, #b7b7b7);
   padding: 0.2em 1em !important;
   border-radius: 4px;
 }
 .upload_grp .upload_btn:hover {
-  background: #004c93;
+  background: #ddd;
   cursor: pointer;
   color: #fff;
   outline: none;
-  background: #003260;
-  background: linear-gradient(to right, #003260, #00172d);
-  border-left: 1px solid #003260;
+  background: #c4c4c4;
+  background: linear-gradient(to right, #c4c4c4, #aaaaaa);
+  border-left: 1px solid #c4c4c4;
 }
 .upload_grp .upload_btn:focus {
-  background: #004c93;
+  background: #ddd;
   cursor: pointer;
   color: #fff;
   outline: none;
   box-shadow: 0 0px 0px 2px #ff3e4d !important;
-  background: #003260;
-  background: linear-gradient(to right, #003260, #00172d);
-  border-left: 1px solid #003260;
+  background: #c4c4c4;
+  background: linear-gradient(to right, #c4c4c4, #aaaaaa);
+  border-left: 1px solid #c4c4c4;
 }
 .upload_grp .upload_btn.active {
-  background: #0059ad;
+  background: #eaeaea;
   cursor: pointer;
 }
 .upload_grp .upload_btn:hover, .upload_grp .upload_btn:focus {
   cursor: pointer !important;
+  color: #000;
 }
 
 input[type=file] {
