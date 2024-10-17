@@ -21,6 +21,7 @@ $menuItems: 15;
   .menu,
   .megamenu {
     display: block;
+    font-size: 1.25rem;
   }
 
   > .menu_overlay {
@@ -55,7 +56,6 @@ $menuItems: 15;
     box-sizing: border-box;
 
     &.open {
-
       .menu,
       .megamenu {
         & > ul {
@@ -140,7 +140,6 @@ $menuItems: 15;
             }
           }
 
-
           ul {
             display: none;
             position: relative;
@@ -160,7 +159,8 @@ $menuItems: 15;
                 border: none;
 
                 &:hover,
-                &:focus {}
+                &:focus {
+                }
               }
 
               &.hasChild {
@@ -178,7 +178,8 @@ $menuItems: 15;
                   padding: 0.5em 1em 0.5em 4em !important;
 
                   &:hover,
-                  &:focus {}
+                  &:focus {
+                  }
 
                   &:after {
                     display: none;
@@ -197,6 +198,7 @@ $menuItems: 15;
     margin: 1em auto;
     text-align: left;
     width: 90%;
+    font-size: 1.25rem;
 
     ul {
       float: none;

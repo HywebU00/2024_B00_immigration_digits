@@ -58,7 +58,7 @@
       @extend %mobileCtrlBtn;
       span {
         position: absolute;
-        background: $primaryColor;
+        background: #fff;
         width: 50%;
         height: 3px;
         top: 20px;
@@ -118,8 +118,10 @@
         max-height: 70px;
       }
       @include screen('mobile') {
+        flex: 0 0 auto;
         padding: 2px 60px;
         width: 100%;
+        flex-basis: auto;
         text-align: center;
         height: 60px;
         img {
@@ -193,6 +195,25 @@
             background: rgb(255, 255, 255);
             background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
             box-shadow: none;
+          }
+        }
+      }
+    }
+    @include screen('mobile') {
+      padding: 0;
+      justify-content: space-between;
+      .signout_block {
+        flex: 0 0 auto;
+        margin-right: 0;
+        flex-basis: auto;
+        max-width: 100%;
+        position: absolute;
+        right: 10px;
+        button {
+          width: auto;
+          &.btn {
+            padding: 0.2em 1em;
+            font-size: 1.25em;
           }
         }
       }

@@ -3288,7 +3288,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 }
 .header > .container .sidebarCtrl span {
   position: absolute;
-  background: #004c93;
+  background: #fff;
   width: 50%;
   height: 3px;
   top: 20px;
@@ -3346,8 +3346,10 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 }
 @media screen and (max-width: 767px) {
   .header .headergroup h1 {
+    flex: 0 0 auto;
     padding: 2px 60px;
     width: 100%;
+    flex-basis: auto;
     text-align: center;
     height: 60px;
   }
@@ -3428,6 +3430,27 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   background: rgb(255, 255, 255);
   background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
   box-shadow: none;
+}
+@media screen and (max-width: 767px) {
+  .header .headergroup {
+    padding: 0;
+    justify-content: space-between;
+  }
+  .header .headergroup .signout_block {
+    flex: 0 0 auto;
+    margin-right: 0;
+    flex-basis: auto;
+    max-width: 100%;
+    position: absolute;
+    right: 10px;
+  }
+  .header .headergroup .signout_block button {
+    width: auto;
+  }
+  .header .headergroup .signout_block button.btn {
+    padding: 0.2em 1em;
+    font-size: 1.25em;
+  }
 }
 
 .search {
@@ -3830,6 +3853,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .sidebar .menu,
 .sidebar .megamenu {
   display: block;
+  font-size: 1.25rem;
 }
 .sidebar > .menu_overlay {
   background: RGBA(0, 0, 0, 0.5);
@@ -4085,6 +4109,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   margin: 1em auto;
   text-align: left;
   width: 90%;
+  font-size: 1.25rem;
 }
 .sidebar .navigation ul {
   float: none;
