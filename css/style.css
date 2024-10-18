@@ -1990,35 +1990,43 @@ kbd kbd {
 }
 
 .btn-white {
-  background: #ccc;
+  background: #f6f6f6;
   border: 1px solid transparent;
-  color: #333;
-  border-left: 1px solid #ccc;
-  background: #cccccc;
-  background: linear-gradient(to right, #cccccc, #a6a6a6);
+  color: #000;
+  border-left: 1px solid #f6f6f6;
+  background: #f6f6f6;
+  background: linear-gradient(to right, #f6f6f6, #d0d0d0);
+  background: #f6f6f6;
+  background: linear-gradient(to right, #f6f6f6, #eee);
+  border: 1px solid #ddd;
 }
 .btn-white:hover {
-  background: #ccc;
+  background: #f6f6f6;
   cursor: pointer;
   color: #fff;
   outline: none;
-  background: #b3b3b3;
-  background: linear-gradient(to right, #b3b3b3, #999999);
-  border-left: 1px solid #b3b3b3;
+  background: #dddddd;
+  background: linear-gradient(to right, #dddddd, #c3c3c3);
+  border-left: 1px solid #dddddd;
 }
 .btn-white:focus {
-  background: #ccc;
+  background: #f6f6f6;
   cursor: pointer;
   color: #fff;
   outline: none;
   box-shadow: 0 0px 0px 2px #ff3e4d !important;
-  background: #b3b3b3;
-  background: linear-gradient(to right, #b3b3b3, #999999);
-  border-left: 1px solid #b3b3b3;
+  background: #dddddd;
+  background: linear-gradient(to right, #dddddd, #c3c3c3);
+  border-left: 1px solid #dddddd;
 }
 .btn-white.active {
-  background: #d9d9d9;
+  background: white;
   cursor: pointer;
+}
+.btn-white:hover {
+  color: #000;
+  background: #eee;
+  background: linear-gradient(to right, #eee, #ddd);
 }
 
 .btn-submit {
@@ -2054,38 +2062,43 @@ kbd kbd {
 }
 
 .btn-reset {
-  background: #f6f6f6;
+  background: #eee;
   border: 1px solid transparent;
-  color: #333;
-  border-left: 1px solid #f6f6f6;
+  color: #000;
+  border-left: 1px solid #eee;
+  background: #eeeeee;
+  background: linear-gradient(to right, #eeeeee, #c8c8c8);
   background: #f6f6f6;
-  background: linear-gradient(to right, #f6f6f6, #d0d0d0);
+  background: linear-gradient(to right, #f6f6f6, #eee);
+  border: 1px solid #ddd;
 }
 .btn-reset:hover {
-  background: #f6f6f6;
+  background: #eee;
   cursor: pointer;
   color: #fff;
   outline: none;
-  background: #dddddd;
-  background: linear-gradient(to right, #dddddd, #c3c3c3);
-  border-left: 1px solid #dddddd;
+  background: #d5d5d5;
+  background: linear-gradient(to right, #d5d5d5, #bbbbbb);
+  border-left: 1px solid #d5d5d5;
 }
 .btn-reset:focus {
-  background: #f6f6f6;
+  background: #eee;
   cursor: pointer;
   color: #fff;
   outline: none;
   box-shadow: 0 0px 0px 2px #ff3e4d !important;
-  background: #dddddd;
-  background: linear-gradient(to right, #dddddd, #c3c3c3);
-  border-left: 1px solid #dddddd;
+  background: #d5d5d5;
+  background: linear-gradient(to right, #d5d5d5, #bbbbbb);
+  border-left: 1px solid #d5d5d5;
 }
 .btn-reset.active {
-  background: white;
+  background: #fbfbfb;
   cursor: pointer;
 }
 .btn-reset:hover {
-  color: #333;
+  color: #000;
+  background: #eee;
+  background: linear-gradient(to right, #eee, #ddd);
 }
 
 .btn-search {
@@ -5255,10 +5268,10 @@ select::-ms-expand {
   font-weight: 600;
 }
 .flex-form .form_title {
-  max-width: 180px;
-  flex: 0 0 180px;
+  max-width: 190px;
+  flex: 0 0 190px;
   align-self: flex-start;
-  padding: 0.65em 0.5em 0.65em 0;
+  padding: 0.65em 0.5em 0.65em 1em;
   font-weight: 500;
   color: #003260;
   line-height: 1.5em;
@@ -5279,8 +5292,8 @@ select::-ms-expand {
   }
 }
 .flex-form .form_title + .form_content[class*=form_col] {
-  flex-basis: calc(100% - 180px);
-  max-width: calc(100% - 180px);
+  flex-basis: calc(100% - 190px);
+  max-width: calc(100% - 190px);
   padding-top: 0;
 }
 @media screen and (max-width: 575px) {
@@ -5291,9 +5304,9 @@ select::-ms-expand {
 }
 .flex-form .form_content {
   display: flex;
-  max-width: calc(100% - 180px);
+  max-width: calc(100% - 190px);
   flex: auto;
-  flex-basis: calc(100% - 180px);
+  flex-basis: calc(100% - 190px);
   position: relative;
   min-height: 1px;
   flex-wrap: wrap;

@@ -107,7 +107,13 @@ $btn-radius: 0.2em;
 }
 .btn-white {
   // @extend %btn;
-  @include btn_setting($color-gray, #333);
+  @include btn_setting(#f6f6f6, #000);
+  @include gradient(#f6f6f6, #eee, horizontal);
+  border: 1px solid #ddd;
+  &:hover {
+    color: #000;
+    @include gradient(#eee, #ddd, horizontal);
+  }
 }
 .btn-submit {
   // @extend %btn;
@@ -116,9 +122,12 @@ $btn-radius: 0.2em;
 }
 .btn-reset {
   // @extend %btn;
-  @include btn_setting(#f6f6f6, #333);
+  @include btn_setting(#eee, #000);
+  @include gradient(#f6f6f6, #eee, horizontal);
+  border: 1px solid #ddd;
   &:hover {
-    color: #333;
+    color: #000;
+    @include gradient(#eee, #ddd, horizontal);
   }
 }
 .btn-search {
