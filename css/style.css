@@ -8988,7 +8988,7 @@ div.function ul li.icon_forward a:before {
 }
 *[class^=notice]:before {
   position: absolute;
-  top: 7px;
+  top: 10px;
   left: 0.25em;
   display: block;
   vertical-align: middle;
@@ -9019,7 +9019,7 @@ div.function ul li.icon_forward a:before {
 }
 
 *[class*=notice_info] {
-  color: #00529B;
+  color: #00529b;
 }
 *[class*=notice_info]:before {
   background: url(../images/basic/icon_info.svg) no-repeat center center;
@@ -9027,7 +9027,7 @@ div.function ul li.icon_forward a:before {
 }
 
 *[class*=notice_success] {
-  color: #3B7600;
+  color: #3b7600;
 }
 *[class*=notice_success]:before {
   background: url(../images/basic/icon_success.svg) no-repeat center center;
@@ -9035,7 +9035,7 @@ div.function ul li.icon_forward a:before {
 }
 
 *[class*=notice_warning] {
-  color: #C23E00;
+  color: #c23e00;
 }
 *[class*=notice_warning]:before {
   background: url(../images/basic/icon_warning.svg) no-repeat center center;
@@ -9043,7 +9043,7 @@ div.function ul li.icon_forward a:before {
 }
 
 *[class*=notice_error] {
-  color: #C40000;
+  color: #c40000;
 }
 *[class*=notice_error]:before {
   background: url(../images/basic/icon_error.svg) no-repeat center center;
