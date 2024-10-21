@@ -9106,6 +9106,10 @@ body.noscroll {
 .wrapper {
   width: 100%;
   margin: 0px auto;
+  background-image: url("../images/contentin_block_bg.jpg");
+  background-position: center bottom;
+  background-color: #fff;
+  background-repeat: no-repeat;
 }
 @media screen and (max-width: 767px) {
   .wrapper {
@@ -9146,12 +9150,6 @@ body.noscroll {
   text-align: center;
 }
 
-.innerpage {
-  background-image: url("../images/contentin_block_bg.jpg");
-  background-position: center bottom;
-  background-color: #fff;
-  background-repeat: no-repeat;
-}
 .innerpage > .container {
   position: relative;
   min-height: 1px;
@@ -9261,7 +9259,7 @@ body.noscroll {
 
 .main .center_block .breadcrumb + .contentin_block,
 .main .center_block h2.title + .contentin_block {
-  margin: 0 0 60px;
+  margin: 0 0 20px;
 }
 
 a.more {
@@ -9986,7 +9984,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 15px 0px;
   padding: 40px;
-  margin: 60px 0;
+  margin: 60px 0 30px;
 }
 
 .sectitle {
