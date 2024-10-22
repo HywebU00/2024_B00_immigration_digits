@@ -139,12 +139,14 @@
       display: flex;
       justify-content: flex-end;
       margin-right: 2em;
+      padding: 0;
+
       @include screen('mobile') {
         display: none;
       }
       @extend %clearfix;
       box-sizing: border-box;
-      display: flex;
+
       .navlist {
         flex: 1 1 auto;
         margin: 0;
