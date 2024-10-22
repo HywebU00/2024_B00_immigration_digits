@@ -10718,6 +10718,64 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   line-height: 1.25em;
 }
 
+.loading_full {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 999;
+  font-size: 1.25rem;
+}
+.loading_full span {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.loading_full img {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 98px;
+  height: 98px;
+}
+
+.loading_block {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(255, 255, 255);
+  z-index: 999;
+  font-size: 1.25rem;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.loading_block img {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 98px;
+  height: 98px;
+}
+
 @media print {
   .main,
   .content, body {
