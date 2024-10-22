@@ -2182,6 +2182,7 @@ kbd kbd {
   opacity: 0.5;
   cursor: not-allowed !important;
   text-shadow: none;
+  box-shadow: none !important;
 }
 
 .readonly,
@@ -7076,7 +7077,6 @@ table.table_sprite tr:nth-child(even) {
   margin-top: -4px;
 }
 .table_list.caselist_Tb .caseTb {
-  display: none;
   overflow-x: auto;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
   border-radius: 5px;
@@ -9102,6 +9102,12 @@ body.noscroll {
   margin: 0;
   padding: 0;
 }
+body.fixed {
+  height: 100%;
+  overflow: hidden !important;
+  width: 100%;
+  position: fixed;
+}
 
 .wrapper {
   width: 100%;
@@ -9245,6 +9251,20 @@ body.noscroll {
 }
 .loginblock .flex-form .btn_grp input.btn {
   box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 16px;
+}
+.loginblock .explain_block {
+  font-size: 1.25em;
+  line-height: 1.7em;
+  padding: 1em;
+  font-weight: 500;
+}
+.loginblock .explain_block a {
+  padding: 0 0.5em;
+  color: #d30000;
+  text-decoration: underline;
+}
+.loginblock .explain_block a:hover {
+  text-decoration: none;
 }
 @media screen and (max-width: 575px) {
   .loginblock {
@@ -10447,6 +10467,255 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 .weeklycalendar_block .dategroup ul li:first-child span {
   display: block;
   padding-top: 5px;
+}
+
+.interview_calendar {
+  background: rgb(195, 234, 251);
+  background: linear-gradient(45deg, rgb(195, 234, 251) 0%, rgb(231, 247, 212) 100%);
+  border-radius: 8px;
+  padding: 2em;
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto 2em;
+}
+
+.react-calendar .react-calendar__navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.5em;
+}
+.react-calendar .react-calendar__navigation .react-calendar__navigation__label {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+.react-calendar .react-calendar__navigation .react-calendar__navigation__label:focus {
+  box-shadow: none;
+}
+.react-calendar .react-calendar__navigation .react-calendar__navigation__label .react-calendar__navigation__label__labelText--from {
+  font-size: 2em;
+  color: #333;
+  font-weight: 500;
+  line-height: 1em;
+}
+.react-calendar .react-calendar__navigation .react-calendar__navigation__label .react-calendar__navigation__label__labelText--from span {
+  color: #d04500;
+  padding: 0 10px;
+}
+.react-calendar .react-calendar__navigation .react-calendar__navigation__prev-button {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+.react-calendar .react-calendar__navigation .react-calendar__navigation__prev-button:focus {
+  box-shadow: none;
+}
+.react-calendar .react-calendar__navigation .react-calendar__navigation__prev-button .prev_btn {
+  flex: 0 0 auto;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.375rem;
+  position: relative;
+  color: #333;
+  padding: 16px 0 5px 70px;
+  font-weight: 500;
+}
+.react-calendar .react-calendar__navigation .react-calendar__navigation__prev-button .prev_btn:before {
+  content: "";
+  width: 56px;
+  height: 56px;
+  background-color: #666;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-20px);
+  transition: 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+.react-calendar .react-calendar__navigation .react-calendar__navigation__prev-button .prev_btn:after {
+  content: "";
+  border: 4px solid #fff;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 22px;
+  top: 50%;
+  border-right: none;
+  border-bottom: none;
+  transform: rotate(-45deg);
+}
+.react-calendar .react-calendar__navigation .react-calendar__navigation__prev-button .prev_btn:hover {
+  color: #000;
+}
+.react-calendar .react-calendar__navigation .react-calendar__navigation__prev-button .prev_btn:hover:before {
+  background-color: #000;
+  box-shadow: none;
+}
+.react-calendar .react-calendar__navigation .react-calendar__navigation__next-button {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+.react-calendar .react-calendar__navigation .react-calendar__navigation__next-button:focus {
+  box-shadow: none;
+}
+.react-calendar .react-calendar__navigation .react-calendar__navigation__next-button .next_btn {
+  flex: 0 0 auto;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.375rem;
+  color: #333;
+  position: relative;
+  padding: 16px 70px 5px 0;
+  font-weight: 500;
+}
+.react-calendar .react-calendar__navigation .react-calendar__navigation__next-button .next_btn:before {
+  content: "";
+  width: 56px;
+  height: 56px;
+  background-color: #666;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-20px);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+.react-calendar .react-calendar__navigation .react-calendar__navigation__next-button .next_btn:after {
+  content: "";
+  border: 4px solid #fff;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  right: 22px;
+  top: 50%;
+  border-right: none;
+  border-bottom: none;
+  transform: rotate(135deg);
+}
+.react-calendar .react-calendar__navigation .react-calendar__navigation__next-button .next_btn:hover {
+  color: #000;
+}
+.react-calendar .react-calendar__navigation .react-calendar__navigation__next-button .next_btn:hover:before {
+  background-color: #000;
+  box-shadow: none;
+}
+.react-calendar .react-calendar__month-view__weekdays {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.react-calendar .react-calendar__month-view__weekdays .react-calendar__month-view__weekdays__weekday {
+  flex: 0 0 auto;
+  flex-basis: calc(14.2857142857% - 0.4em);
+  overflow: hidden;
+  margin-inline-end: 0;
+  padding: 0.8em 0.5em;
+  border-radius: 8px;
+  display: block;
+  background-color: #fff;
+  text-align: center;
+  font-weight: bold;
+  margin: 0.2em;
+}
+.react-calendar .react-calendar__month-view__days {
+  display: flex;
+  flex-wrap: wrap;
+}
+.react-calendar .react-calendar__month-view__days .react-calendar__month-view__days__day {
+  flex: 0 0 auto;
+  flex-basis: calc(14.2857142857% - 0.4em);
+  overflow: hidden;
+  margin-inline-end: 0;
+  line-height: 1.5em;
+  font-size: 1.25rem;
+  padding: 0.5em;
+  border-radius: 8px;
+  display: block;
+  background-color: #003f7a;
+  text-align: center;
+  border: 0;
+  margin: 0.2em;
+  color: #fff;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 4px, rgba(0, 0, 0, 0.23) 0px 3px 4px;
+}
+.react-calendar .react-calendar__month-view__days .react-calendar__month-view__days__day:hover {
+  background-color: #0066c6;
+  box-shadow: none;
+}
+.react-calendar .react-calendar__month-view__days .disabled,
+.react-calendar .react-calendar__month-view__days [disabled] {
+  opacity: 0.5;
+  cursor: not-allowed !important;
+  text-shadow: none;
+  box-shadow: none !important;
+}
+.react-calendar .react-calendar__month-view__days .disabled:hover,
+.react-calendar .react-calendar__month-view__days [disabled]:hover {
+  background-color: #003f7a;
+}
+
+.lightboxstyle {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 99;
+  font-size: 1.25rem;
+}
+.lightboxstyle .overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.lightboxstyle .lightboxstyle_block {
+  width: 80vh;
+  position: relative;
+  padding: 2em 2.5em 1em;
+  margin: 30px auto;
+  background-color: #fff;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.lightboxstyle .close {
+  position: absolute;
+  right: 0.5em;
+  top: 0.5em;
+}
+.lightboxstyle .close a {
+  background-image: url("../images/icon/icon_close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px;
+  width: 36px;
+  height: 36px;
+  padding: 4px;
+  border-radius: 5px;
+  background-color: #eee;
+  display: block;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 0;
+}
+.lightboxstyle .title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5em;
+  color: #004c93;
+  line-height: 1.5em;
+}
+.lightboxstyle .content {
+  line-height: 1.25em;
 }
 
 @media print {

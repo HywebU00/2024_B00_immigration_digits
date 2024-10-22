@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta name="robots" content="noindex"><!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>系統更新中</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: arial, sans-serif;
+        }
+
+        body {
+            color: #414141;
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        footer {
+            width: 100%;
+            max-width: 1120px;
+            margin: 0px auto;
+            padding: 1em;
+            font-size: 1.25rem;
+        }
+
+        footer ul {
+            list-style: none;
+            display: flex;
+        }
+
+        footer ul li a {
+            display: block;
+            padding: .5em 1em;
+            font-size: 90%;
+            color: #222;
+            background: #ddd;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-right: 4px;
+            /* background: pink; */
+        }
+
+        footer p {
+            line-height: 1.6;
+            margin-top: 2em;
+            font-size: 90%;
+        }
+
+        .logo {
+            height: 72px;
+            margin-bottom: 1em;
+            background: url(images/logo2.png) left 50% no-repeat;
+            color: transparent;
+            background-size: contain;
+        }
+
+        .wrapper {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0px auto;
+            padding: 1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper>img {
+            width: 55%;
+        }
+
+        .wrapper h2 {
+            overflow: hidden;
+            font-size: 3.5em;
+        }
+
+        .btn_grp a {
+            display: inline-block;
+            border-radius: 5px;
+            padding: 0.5em 1.3em;
+            margin: 0 1em 1em;
+            min-width: 10em;
+            text-align: center;
+            color: #4e4fa0;
+            border: 1px solid #4e4fa0;
+            text-decoration: none;
+            transition: 0.3s ease-out;
+        }
+
+        .btn_grp a:hover,
+        .btn_grp a:focus {
+            background: rgba(29, 144, 172, 0.2);
+            box-shadow: none;
+            outline: none;
+        }
+
+        .error {
+            margin: 2em 0;
+        }
+
+        @media screen and (max-width: 940px) {
+            .wrapper {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            footer {
+                text-align: center;
+            }
+
+            footer ul {
+                justify-content: center;
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+            .logo {
+                margin-top: 1em;
+            }
+
+            .wrapper h2 {
+                font-size: 2.6em;
+            }
+        }
+
+        @media screen and (max-width: 422px) {
+            .btn_grp {
+                text-align: center;
+            }
+
+            footer ul {
+                flex-direction: column;
+            }
+
+            footer ul li {
+                margin: 2px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="">
+            <h1 class="logo">內政部移民署</h1>
+            <div class="title">
+                <h2>系統正在維護中！<br>請稍後使用。</h2>
+            </div>
+            <div class="error">
+                <h3>造成您的不便&nbsp;敬請見諒</h3>
+                <h3>
+                    <small>This Website is Temporarily Unavailable.</small>
+                    <small>Please try again later.<br>Sorry for the inconvenience caused.</small>
+                </h3>
+            </div>
+        </div>
+        <img src="images/404_img.svg" alt="">
+    </div>
+    <footer>
+        <ul>
+            <li><a href="#">隱私權保護服務及宣告</a></li>
+            <li><a href="#">安全防護與回復機制</a></li>
+            <li><a href="#">資訊安全宣告</a></li>
+        </ul>
+        <p>內政部移民署 版權所有 © NATIONAL IMMIGRATION AGENCY <br>Address：No.15, Guangzhou St., Zhongzheng Dist., Taipei City 100, Taiwan (R.O.C.)</p>
+    </footer>
+</body>
+
+</html>

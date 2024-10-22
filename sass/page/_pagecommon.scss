@@ -524,4 +524,263 @@
     }
   }
 }
-// 督導稽核
+
+// 面談月曆 套件
+.interview_calendar {
+  background: rgb(195, 234, 251);
+  background: linear-gradient(45deg, rgba(195, 234, 251, 1) 0%, rgba(231, 247, 212, 1) 100%);
+  border-radius: 8px;
+  padding: 2em;
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto 2em;
+  // box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.react-calendar {
+  // 1
+  .react-calendar__navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2.5em;
+    .react-calendar__navigation__label {
+      background-color: transparent;
+      padding: 0;
+      margin: 0;
+      border: none;
+      &:focus {
+        box-shadow: none;
+      }
+      .react-calendar__navigation__label__labelText--from {
+        font-size: 2em;
+        color: #333;
+        font-weight: 500;
+        line-height: 1em;
+        span {
+          color: #d04500;
+          padding: 0 10px;
+        }
+      }
+    }
+
+    .react-calendar__navigation__prev-button {
+      background-color: transparent;
+      padding: 0;
+      margin: 0;
+      border: none;
+      &:focus {
+        box-shadow: none;
+      }
+      .prev_btn {
+        flex: 0 0 auto;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 1.375rem;
+        position: relative;
+        color: #333;
+        padding: 16px 0 5px 70px;
+        font-weight: 500;
+        &:before {
+          content: '';
+          width: 56px;
+          height: 56px;
+          background-color: #666;
+          border-radius: 50%;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-20px);
+          transition: 0.5s;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+        }
+        &:after {
+          content: '';
+          border: 4px solid #fff;
+          width: 10px;
+          height: 10px;
+          position: absolute;
+          left: 22px;
+          top: 50%;
+          border-right: none;
+          border-bottom: none;
+          transform: rotate(-45deg);
+        }
+
+        &:hover {
+          color: #000;
+          &:before {
+            background-color: #000;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+    .react-calendar__navigation__next-button {
+      background-color: transparent;
+      padding: 0;
+      margin: 0;
+      border: none;
+      &:focus {
+        box-shadow: none;
+      }
+      .next_btn {
+        flex: 0 0 auto;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 1.375rem;
+        color: #333;
+        position: relative;
+        padding: 16px 70px 5px 0;
+        font-weight: 500;
+        &:before {
+          content: '';
+          width: 56px;
+          height: 56px;
+          background-color: #666;
+          border-radius: 50%;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-20px);
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+        }
+        &:after {
+          content: '';
+          border: 4px solid #fff;
+          width: 10px;
+          height: 10px;
+          position: absolute;
+          right: 22px;
+          top: 50%;
+          border-right: none;
+          border-bottom: none;
+          transform: rotate(135deg);
+        }
+
+        &:hover {
+          color: #000;
+          &:before {
+            background-color: #000;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+  // 2
+  .react-calendar__month-view__weekdays {
+    display: flex;
+    flex-wrap: nowrap;
+    .react-calendar__month-view__weekdays__weekday {
+      flex: 0 0 auto;
+      flex-basis: calc(100% / 7 - 0.4em);
+      overflow: hidden;
+      margin-inline-end: 0;
+      padding: 0.8em 0.5em;
+      border-radius: 8px;
+      display: block;
+      background-color: #fff;
+      text-align: center;
+      font-weight: bold;
+      margin: 0.2em;
+
+      &:hover {
+      }
+    }
+  }
+  // 3
+  .react-calendar__month-view__days {
+    display: flex;
+    flex-wrap: wrap;
+    .react-calendar__month-view__days__day {
+      flex: 0 0 auto;
+      flex-basis: calc(100% / 7 - 0.4em);
+      overflow: hidden;
+      margin-inline-end: 0;
+      line-height: 1.5em;
+      font-size: 1.25rem;
+      padding: 0.5em;
+      border-radius: 8px;
+      display: block;
+      background-color: darken($color: $primaryColor, $amount: 5);
+      text-align: center;
+      border: 0;
+      margin: 0.2em;
+      color: #fff;
+      box-sizing: border-box;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 4px, rgba(0, 0, 0, 0.23) 0px 3px 4px;
+      &:hover {
+        background-color: lighten($color: $primaryColor, $amount: 10);
+        box-shadow: none;
+      }
+    }
+    .disabled,
+    [disabled] {
+      opacity: 0.5;
+      cursor: not-allowed !important;
+      text-shadow: none;
+      box-shadow: none !important;
+      &:hover {
+        background-color: darken($color: $primaryColor, $amount: 5);
+      }
+    }
+  }
+}
+// 訊息燈箱資料
+.lightboxstyle {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 99;
+  font-size: 1.25rem;
+  .overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .lightboxstyle_block {
+    width: 80vh;
+    position: relative;
+    padding: 2em 2.5em 1em;
+    margin: 30px auto;
+    background-color: #fff;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  .close {
+    position: absolute;
+    right: 0.5em;
+    top: 0.5em;
+    a {
+      background-image: url('../images/icon/icon_close.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 24px;
+      width: 36px;
+      height: 36px;
+      padding: 4px;
+      border-radius: 5px;
+      background-color: #eee;
+      display: block;
+      box-sizing: border-box;
+      cursor: pointer;
+      font-size: 0;
+    }
+  }
+  .title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1em;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5em;
+    color: $primaryColor;
+    line-height: 1.5em;
+  }
+  .content {
+    line-height: 1.25em;
+  }
+}
