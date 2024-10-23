@@ -10494,13 +10494,18 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   box-shadow: none;
 }
 .react-calendar .react-calendar__navigation .react-calendar__navigation__label .react-calendar__navigation__label__labelText--from {
-  font-size: 1.875em;
+  font-size: 1.75em;
   color: #333;
   font-weight: 500;
   line-height: 1em;
   background-color: #fff;
-  padding: 0 1em;
+  padding: 0 0.5em 0.1em;
   border-radius: 8px;
+  position: relative;
+  transition: 0.5s;
+}
+.react-calendar .react-calendar__navigation .react-calendar__navigation__label .react-calendar__navigation__label__labelText--from:hover {
+  background-color: #ddd;
 }
 .react-calendar .react-calendar__navigation .react-calendar__navigation__prev-button {
   background-color: transparent;

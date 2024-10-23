@@ -551,13 +551,18 @@
         box-shadow: none;
       }
       .react-calendar__navigation__label__labelText--from {
-        font-size: 1.875em;
+        font-size: 1.75em;
         color: #333;
         font-weight: 500;
         line-height: 1em;
         background-color: #fff;
-        padding: 0 1em;
+        padding: 0 0.5em 0.1em;
         border-radius: 8px;
+        position: relative;
+        transition: 0.5s;
+        &:hover {
+          background-color: #ddd;
+        }
       }
     }
 
