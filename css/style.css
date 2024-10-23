@@ -10494,14 +10494,13 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   box-shadow: none;
 }
 .react-calendar .react-calendar__navigation .react-calendar__navigation__label .react-calendar__navigation__label__labelText--from {
-  font-size: 2em;
+  font-size: 1.875em;
   color: #333;
   font-weight: 500;
   line-height: 1em;
-}
-.react-calendar .react-calendar__navigation .react-calendar__navigation__label .react-calendar__navigation__label__labelText--from span {
-  color: #d04500;
-  padding: 0 10px;
+  background-color: #fff;
+  padding: 0 1em;
+  border-radius: 8px;
 }
 .react-calendar .react-calendar__navigation .react-calendar__navigation__prev-button {
   background-color: transparent;
@@ -10526,7 +10525,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   content: "";
   width: 56px;
   height: 56px;
-  background-color: #666;
+  background-color: #003f7a;
   border-radius: 50%;
   position: absolute;
   left: 0;
@@ -10534,6 +10533,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   transform: translateY(-20px);
   transition: 0.5s;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  transition: 0.5s;
 }
 .react-calendar .react-calendar__navigation .react-calendar__navigation__prev-button .prev_btn:after {
   content: "";
@@ -10577,13 +10577,14 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   content: "";
   width: 56px;
   height: 56px;
-  background-color: #666;
+  background-color: #003f7a;
   border-radius: 50%;
   position: absolute;
   right: 0;
   top: 50%;
   transform: translateY(-20px);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  transition: 0.5s;
 }
 .react-calendar .react-calendar__navigation .react-calendar__navigation__next-button .next_btn:after {
   content: "";
@@ -10610,16 +10611,25 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 }
 .react-calendar .react-calendar__month-view__weekdays .react-calendar__month-view__weekdays__weekday {
   flex: 0 0 auto;
-  flex-basis: calc(14.2857142857% - 0.4em);
+  flex-basis: 14.2857142857%;
   overflow: hidden;
   margin-inline-end: 0;
-  padding: 0.8em 0.5em;
+  border: 0;
+  padding: 0;
+}
+.react-calendar .react-calendar__month-view__weekdays .react-calendar__month-view__weekdays__weekday abbr {
+  line-height: 1.8em;
+  font-size: 1.25rem;
+  padding: 8px 3px;
   border-radius: 8px;
   display: block;
   background-color: #fff;
   text-align: center;
+  border: 0;
+  margin: 5px;
+  color: #333;
   font-weight: bold;
-  margin: 0.2em;
+  box-sizing: border-box;
 }
 .react-calendar .react-calendar__month-view__days {
   display: flex;
@@ -10627,23 +10637,33 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 }
 .react-calendar .react-calendar__month-view__days .react-calendar__month-view__days__day {
   flex: 0 0 auto;
-  flex-basis: calc(14.2857142857% - 0.4em);
+  flex-basis: 14.2857142857%;
   overflow: hidden;
   margin-inline-end: 0;
-  line-height: 1.5em;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+.react-calendar .react-calendar__month-view__days .react-calendar__month-view__days__day abbr {
+  line-height: 1.8em;
   font-size: 1.25rem;
-  padding: 0.5em;
+  padding: 8px 3px;
   border-radius: 8px;
   display: block;
   background-color: #003f7a;
   text-align: center;
   border: 0;
-  margin: 0.2em;
+  margin: 5px;
   color: #fff;
   box-sizing: border-box;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 4px, rgba(0, 0, 0, 0.23) 0px 3px 4px;
+  transition: 0.5s;
 }
 .react-calendar .react-calendar__month-view__days .react-calendar__month-view__days__day:hover {
+  background-color: transparent;
+}
+.react-calendar .react-calendar__month-view__days .react-calendar__month-view__days__day:hover abbr {
   background-color: #0066c6;
   box-shadow: none;
 }
@@ -10652,11 +10672,15 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   opacity: 0.5;
   cursor: not-allowed !important;
   text-shadow: none;
+}
+.react-calendar .react-calendar__month-view__days .disabled abbr,
+.react-calendar .react-calendar__month-view__days [disabled] abbr {
   box-shadow: none !important;
 }
-.react-calendar .react-calendar__month-view__days .disabled:hover,
-.react-calendar .react-calendar__month-view__days [disabled]:hover {
+.react-calendar .react-calendar__month-view__days .disabled:hover abbr,
+.react-calendar .react-calendar__month-view__days [disabled]:hover abbr {
   background-color: #003f7a;
+  box-shadow: none;
 }
 
 .lightboxstyle {
@@ -10727,18 +10751,6 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   background-color: rgba(255, 255, 255, 0.9);
   z-index: 999;
   font-size: 1.25rem;
-}
-.loading_full span {
-  position: absolute;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  background-color: #fff;
 }
 .loading_full img {
   position: absolute;

@@ -551,14 +551,13 @@
         box-shadow: none;
       }
       .react-calendar__navigation__label__labelText--from {
-        font-size: 2em;
+        font-size: 1.875em;
         color: #333;
         font-weight: 500;
         line-height: 1em;
-        span {
-          color: #d04500;
-          padding: 0 10px;
-        }
+        background-color: #fff;
+        padding: 0 1em;
+        border-radius: 8px;
       }
     }
 
@@ -583,7 +582,7 @@
           content: '';
           width: 56px;
           height: 56px;
-          background-color: #666;
+          background-color: darken($color: $primaryColor, $amount: 5);
           border-radius: 50%;
           position: absolute;
           left: 0;
@@ -591,6 +590,7 @@
           transform: translateY(-20px);
           transition: 0.5s;
           box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+          transition: 0.5s;
         }
         &:after {
           content: '';
@@ -635,13 +635,14 @@
           content: '';
           width: 56px;
           height: 56px;
-          background-color: #666;
+          background-color: darken($color: $primaryColor, $amount: 5);
           border-radius: 50%;
           position: absolute;
           right: 0;
           top: 50%;
           transform: translateY(-20px);
           box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+          transition: 0.5s;
         }
         &:after {
           content: '';
@@ -670,19 +671,28 @@
   .react-calendar__month-view__weekdays {
     display: flex;
     flex-wrap: nowrap;
+
     .react-calendar__month-view__weekdays__weekday {
       flex: 0 0 auto;
-      flex-basis: calc(100% / 7 - 0.4em);
+      flex-basis: calc(100% / 7);
       overflow: hidden;
       margin-inline-end: 0;
-      padding: 0.8em 0.5em;
-      border-radius: 8px;
-      display: block;
-      background-color: #fff;
-      text-align: center;
-      font-weight: bold;
-      margin: 0.2em;
-
+      border: 0;
+      padding: 0;
+      abbr {
+        line-height: 1.8em;
+        font-size: 1.25rem;
+        padding: 8px 3px;
+        border-radius: 8px;
+        display: block;
+        background-color: #fff;
+        text-align: center;
+        border: 0;
+        margin: 5px;
+        color: #333;
+        font-weight: bold;
+        box-sizing: border-box;
+      }
       &:hover {
       }
     }
@@ -693,24 +703,34 @@
     flex-wrap: wrap;
     .react-calendar__month-view__days__day {
       flex: 0 0 auto;
-      flex-basis: calc(100% / 7 - 0.4em);
+      flex-basis: calc(100% / 7);
       overflow: hidden;
       margin-inline-end: 0;
-      line-height: 1.5em;
-      font-size: 1.25rem;
-      padding: 0.5em;
-      border-radius: 8px;
-      display: block;
-      background-color: darken($color: $primaryColor, $amount: 5);
-      text-align: center;
       border: 0;
-      margin: 0.2em;
-      color: #fff;
-      box-sizing: border-box;
-      box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 4px, rgba(0, 0, 0, 0.23) 0px 3px 4px;
+      margin: 0;
+      padding: 0;
+      background-color: transparent;
+      abbr {
+        line-height: 1.8em;
+        font-size: 1.25rem;
+        padding: 8px 3px;
+        border-radius: 8px;
+        display: block;
+        background-color: darken($color: $primaryColor, $amount: 5);
+        text-align: center;
+        border: 0;
+        margin: 5px;
+        color: #fff;
+        box-sizing: border-box;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 4px, rgba(0, 0, 0, 0.23) 0px 3px 4px;
+        transition: 0.5s;
+      }
       &:hover {
-        background-color: lighten($color: $primaryColor, $amount: 10);
-        box-shadow: none;
+        background-color: transparent;
+        abbr {
+          background-color: lighten($color: $primaryColor, $amount: 10);
+          box-shadow: none;
+        }
       }
     }
     .disabled,
@@ -718,9 +738,15 @@
       opacity: 0.5;
       cursor: not-allowed !important;
       text-shadow: none;
-      box-shadow: none !important;
+
+      abbr {
+        box-shadow: none !important;
+      }
       &:hover {
-        background-color: darken($color: $primaryColor, $amount: 5);
+        abbr {
+          background-color: darken($color: $primaryColor, $amount: 5);
+          box-shadow: none;
+        }
       }
     }
   }
@@ -794,19 +820,7 @@
   background-color: rgba(255, 255, 255, 0.9);
   z-index: 999;
   font-size: 1.25rem;
-  span {
-    position: absolute;
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    // outline: 1px solid #ddd;
-    background-color: #fff;
-  }
+
   img {
     position: absolute;
     margin: auto;
