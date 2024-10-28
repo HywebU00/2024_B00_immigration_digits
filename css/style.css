@@ -1753,6 +1753,7 @@ kbd kbd {
   margin: 0.25em 0.1em;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   font-size: 1.25rem;
+  border-radius: 0.2em;
 }
 .upload_grp .upload_btn i, .btn i {
   margin-right: 0.25em;
@@ -1767,6 +1768,7 @@ kbd kbd {
   background: #e0e0e0;
   background: linear-gradient(to right, #e0e0e0, #bababa);
   text-shadow: none;
+  color: #fff !important;
 }
 .btn:hover {
   background: #e0e0e0;
@@ -1795,6 +1797,7 @@ kbd kbd {
   color: #222;
   outline: none;
   box-shadow: none;
+  text-decoration: none !important;
 }
 
 .btn-green {
@@ -1868,6 +1871,7 @@ kbd kbd {
   border-left: 1px solid #fec61c;
   background: #fec61c;
   background: linear-gradient(to right, #fec61c, #cd9b01);
+  color: #333 !important;
 }
 .btn-yellow:hover {
   background: #fec61c;
@@ -1999,6 +2003,7 @@ kbd kbd {
   background: #f6f6f6;
   background: linear-gradient(to right, #f6f6f6, #eee);
   border: 1px solid #ddd;
+  color: #333 !important;
 }
 .btn-white:hover {
   background: #f6f6f6;
@@ -2024,7 +2029,7 @@ kbd kbd {
   cursor: pointer;
 }
 .btn-white:hover {
-  color: #000;
+  color: #000 !important;
   background: #eee;
   background: linear-gradient(to right, #eee, #ddd);
 }
@@ -2071,6 +2076,7 @@ kbd kbd {
   background: #f6f6f6;
   background: linear-gradient(to right, #f6f6f6, #eee);
   border: 1px solid #ddd;
+  color: #333 !important;
 }
 .btn-reset:hover {
   background: #eee;
@@ -2096,7 +2102,7 @@ kbd kbd {
   cursor: pointer;
 }
 .btn-reset:hover {
-  color: #000;
+  color: #333 !important;
   background: #eee;
   background: linear-gradient(to right, #eee, #ddd);
 }
@@ -10065,7 +10071,8 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   flex-basis: 100%;
   padding-top: 1em;
 }
-.searchform .btn_grp button.btn {
+.searchform .btn_grp button.btn,
+.searchform .btn_grp a.btn {
   min-width: 6em;
 }
 
@@ -10793,6 +10800,44 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   height: 98px;
 }
 
+.subtitle {
+  line-height: 2em;
+  font-size: 2rem;
+  color: #0097e5;
+  margin: 0.5em 0 1em;
+  text-align: center;
+  font-weight: bold;
+}
+
+.appointment_completed {
+  text-align: center;
+}
+.appointment_completed .reserve_content {
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  padding: 1.5em;
+  font-size: 1.625em;
+  margin-bottom: 1em;
+  font-weight: bold;
+  color: #333;
+}
+.appointment_completed .reserve_content p {
+  line-height: 1.8em;
+}
+.appointment_completed .iconstyle {
+  margin-bottom: 1em;
+}
+.appointment_completed .iconstyle img {
+  width: 50px;
+  height: 50px;
+}
+.appointment_completed .download_block {
+  border-top: 2px dashed #ccc;
+  padding: 1.5em 1.5em 0;
+  color: #555;
+  font-size: 0.875em;
+  line-height: 1.8em;
+}
 @media print {
   .main,
   .content, body {

@@ -61,6 +61,7 @@ $btn-radius: 0.2em;
   margin: 0.25em 0.1em;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   font-size: 1.25rem;
+  border-radius: $btn-radius;
   i {
     margin-right: 0.25em;
     margin-left: 0.25em;
@@ -72,11 +73,13 @@ $btn-radius: 0.2em;
   // box-sizing: border-box;
   @include btn_setting;
   text-shadow: none;
+  color: #fff !important;
   &:hover,
   &:focus {
     color: $btn-font-color;
     outline: none;
     box-shadow: none;
+    text-decoration: none !important;
   }
 }
 //按鈕顏色
@@ -92,6 +95,7 @@ $btn-radius: 0.2em;
 .btn-yellow {
   // @extend %btn;
   @include btn_setting(lighten($color-yellow, 5), #333);
+  color: #333 !important;
 }
 .btn-orange {
   // @extend %btn;
@@ -110,8 +114,9 @@ $btn-radius: 0.2em;
   @include btn_setting(#f6f6f6, #000);
   @include gradient(#f6f6f6, #eee, horizontal);
   border: 1px solid #ddd;
+  color: #333 !important;
   &:hover {
-    color: #000;
+    color: #000 !important;
     @include gradient(#eee, #ddd, horizontal);
   }
 }
@@ -125,8 +130,9 @@ $btn-radius: 0.2em;
   @include btn_setting(#eee, #000);
   @include gradient(#f6f6f6, #eee, horizontal);
   border: 1px solid #ddd;
+  color: #333 !important;
   &:hover {
-    color: #000;
+    color: #333 !important;
     @include gradient(#eee, #ddd, horizontal);
   }
 }
