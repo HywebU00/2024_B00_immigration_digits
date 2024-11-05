@@ -10838,6 +10838,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   font-size: 0.875em;
   line-height: 1.8em;
 }
+
 @media print {
   .main,
   .content, body {
