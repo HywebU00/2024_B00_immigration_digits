@@ -315,20 +315,22 @@ select::-ms-expand {
     .address {
       select {
         min-width: 100px;
-        margin-bottom: 2px;
-        margin-top: 2px;
+        margin-bottom: 4px;
+        margin-top: 0;
+
         option {
           text-align: center;
         }
         @include screen('xs_mobile') {
           width: 100px;
+
           display: inline-block !important;
         }
       }
-      input[type='text'] {
+      input[type='text'],
+      input[type='number'] {
         margin-bottom: 5px;
         width: 150px;
-        //width: calc(100% - 231px) !important;
         flex: 0 0 auto;
 
         &.user_typing {
@@ -348,6 +350,7 @@ select::-ms-expand {
     // 日期專屬
     .datepick {
       position: relative;
+      display: flex;
       @include screen('xs_mobile') {
         width: 100%;
         display: block;
