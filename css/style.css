@@ -10164,10 +10164,21 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 
 .interviewee_group {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 0.5em;
 }
 .interviewee_group:last-of-type {
   margin: 0;
+}
+.interviewee_group .interviewee_title {
+  flex: 0 0 auto;
+  flex-basis: 40px;
+  max-width: 40px;
+}
+.interviewee_group .interviewee_content {
+  flex: 1 0 auto;
+  flex-basis: calc(100% - 60px);
+  max-width: calc(100% - 6px);
 }
 
 .qa_group .qalist {

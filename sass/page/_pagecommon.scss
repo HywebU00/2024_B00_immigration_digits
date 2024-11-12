@@ -169,10 +169,26 @@
 // 受訪者
 .interviewee_group {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 0.5em;
   &:last-of-type {
     margin: 0;
   }
+  .interviewee_title {
+    flex: 0 0 auto;
+    flex-basis: 40px;
+    max-width: 40px;
+  }
+  .interviewee_content {
+    flex: 1 0 auto;
+    flex-basis: calc(100% - 60px);
+    max-width: calc(100% - 6px);
+  }
+
+  // div[class^='notice'] {
+  //   flex: 1 1 auto;
+  //   flex-basis: 100%;
+  // }
 }
 // 面談紀錄問答
 .qa_group {
