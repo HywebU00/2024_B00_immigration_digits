@@ -184,11 +184,14 @@
     flex-basis: calc(100% - 60px);
     max-width: calc(100% - 6px);
   }
-
-  // div[class^='notice'] {
-  //   flex: 1 1 auto;
-  //   flex-basis: 100%;
-  // }
+  @media (max-width: 1200px) {
+    .interviewee_title,
+    .interviewee_content {
+      flex: 1 1 auto;
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
 }
 // 面談紀錄問答
 .qa_group {

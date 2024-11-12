@@ -10180,6 +10180,14 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   flex-basis: calc(100% - 60px);
   max-width: calc(100% - 6px);
 }
+@media (max-width: 1200px) {
+  .interviewee_group .interviewee_title,
+  .interviewee_group .interviewee_content {
+    flex: 1 1 auto;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
 
 .qa_group .qalist {
   background-color: #fff;
