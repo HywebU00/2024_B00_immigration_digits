@@ -57,6 +57,25 @@
   .flex-form {
     display: flex;
     flex-wrap: wrap;
+    &.form_inline {
+      .form_grp {
+        width: 100%;
+        align-items: center;
+        .form_content {
+          max-width: auto;
+          flex: auto;
+          flex-basis: auto;
+        }
+      }
+      .btn_grp {
+        flex: 0 0 auto;
+        flex-basis: auto;
+        padding-top: 0;
+        input[type='submit'] {
+          padding: 0.25em 1em;
+        }
+      }
+    }
   }
   .form_grp {
   }
@@ -64,6 +83,7 @@
     background-color: #f4f4f4;
     border-radius: 8px;
     padding: 1em 2em;
+    border-bottom: none;
   }
   .btn_grp {
     flex: 1 1 auto;
@@ -478,6 +498,8 @@
       flex-direction: column;
       li {
         margin-bottom: 0.4em;
+        border-radius: 8px;
+
         a {
           display: flex;
           justify-content: center;
@@ -490,6 +512,10 @@
           &:hover {
             background-color: lighten($color: $primaryColor, $amount: 10);
             box-shadow: none;
+          }
+          &:focus,
+          &.active {
+            box-shadow: 0px 0px 0px 3px $color-red;
           }
         }
         &.alreadyfull {
@@ -919,5 +945,63 @@
     color: #555;
     font-size: 0.875em;
     line-height: 1.8em;
+  }
+}
+
+// 檔案瀏覽
+.filebrowsing_block {
+  margin-top: 0.65em;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    li {
+      margin-bottom: 12px;
+      padding-left: 18px;
+      background-image: url('../images/filebrowsing_icon01.svg');
+      background-repeat: no-repeat;
+      background-position: left 10px;
+      background-size: 17px;
+      a {
+        display: block;
+        padding: 5px;
+        input[type='checkbox'] {
+          vertical-align: middle;
+          margin: -1px 0.3em 0;
+        }
+        label {
+          padding-left: 0;
+          padding-right: 0;
+        }
+        &:focus {
+          box-shadow: none !important;
+        }
+      }
+
+      ul {
+        margin: 0.4em 0 0.4em 0.6em !important;
+        li {
+          margin-bottom: 6px;
+          padding-left: 15px;
+          background-image: url('../images/filebrowsing_icon01.svg');
+          background-repeat: no-repeat;
+          background-position: left 10px;
+          background-size: 17px;
+          ul {
+            margin: 0.4em 0 0.4em 1.3em !important;
+            li {
+              background-image: none;
+              padding-left: 0;
+            }
+          }
+        }
+      }
+    }
+    li:has(> ul) {
+      background-image: url('../images/filebrowsing_icon02.svg');
+      background-repeat: no-repeat;
+      background-position: left 10px;
+      background-size: 20px;
+    }
   }
 }

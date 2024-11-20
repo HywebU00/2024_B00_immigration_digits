@@ -6703,6 +6703,10 @@ input[type=radio] {
   border: 2px solid #ccc;
 }
 
+input[type=checkbox] {
+  border-radius: 5px;
+}
+
 input[type=radio] {
   border-radius: 50%;
 }
@@ -7534,7 +7538,6 @@ table.table_sprite tr:nth-child(even) {
   z-index: 9;
 }
 .tabSet .tabContent {
-  display: none;
   position: relative;
   padding: 1.5em 1em 1em;
   border: #004c93 2px solid;
@@ -10066,10 +10069,28 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   display: flex;
   flex-wrap: wrap;
 }
+.searchform .flex-form.form_inline .form_grp {
+  width: 100%;
+  align-items: center;
+}
+.searchform .flex-form.form_inline .form_grp .form_content {
+  max-width: auto;
+  flex: auto;
+  flex-basis: auto;
+}
+.searchform .flex-form.form_inline .btn_grp {
+  flex: 0 0 auto;
+  flex-basis: auto;
+  padding-top: 0;
+}
+.searchform .flex-form.form_inline .btn_grp input[type=submit] {
+  padding: 0.25em 1em;
+}
 .searchform .formbg {
   background-color: #f4f4f4;
   border-radius: 8px;
   padding: 1em 2em;
+  border-bottom: none;
 }
 .searchform .btn_grp {
   flex: 1 1 auto;
@@ -10445,6 +10466,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 .weeklycalendar_block .time_interval ul li,
 .weeklycalendar_block .dategroup ul li {
   margin-bottom: 0.4em;
+  border-radius: 8px;
 }
 .weeklycalendar_block .time_interval ul li a,
 .weeklycalendar_block .dategroup ul li a {
@@ -10461,6 +10483,11 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 .weeklycalendar_block .dategroup ul li a:hover {
   background-color: #0066c6;
   box-shadow: none;
+}
+.weeklycalendar_block .time_interval ul li a:focus, .weeklycalendar_block .time_interval ul li a.active,
+.weeklycalendar_block .dategroup ul li a:focus,
+.weeklycalendar_block .dategroup ul li a.active {
+  box-shadow: 0px 0px 0px 3px #d30000;
 }
 .weeklycalendar_block .time_interval ul li.alreadyfull a,
 .weeklycalendar_block .dategroup ul li.alreadyfull a {
@@ -10861,6 +10888,62 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   color: #555;
   font-size: 0.875em;
   line-height: 1.8em;
+}
+
+.filebrowsing_block {
+  margin-top: 0.65em;
+}
+.filebrowsing_block ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.filebrowsing_block ul li {
+  margin-bottom: 12px;
+  padding-left: 18px;
+  background-image: url("../images/filebrowsing_icon01.svg");
+  background-repeat: no-repeat;
+  background-position: left 10px;
+  background-size: 17px;
+}
+.filebrowsing_block ul li a {
+  display: block;
+  padding: 5px;
+}
+.filebrowsing_block ul li a input[type=checkbox] {
+  vertical-align: middle;
+  margin: -1px 0.3em 0;
+}
+.filebrowsing_block ul li a label {
+  padding-left: 0;
+  padding-right: 0;
+}
+.filebrowsing_block ul li a:focus {
+  box-shadow: none !important;
+}
+.filebrowsing_block ul li ul {
+  margin: 0.4em 0 0.4em 0.6em !important;
+}
+.filebrowsing_block ul li ul li {
+  margin-bottom: 6px;
+  padding-left: 15px;
+  background-image: url("../images/filebrowsing_icon01.svg");
+  background-repeat: no-repeat;
+  background-position: left 10px;
+  background-size: 17px;
+}
+.filebrowsing_block ul li ul li ul {
+  margin: 0.4em 0 0.4em 1.3em !important;
+}
+.filebrowsing_block ul li ul li ul li {
+  background-image: none;
+  padding-left: 0;
+}
+.filebrowsing_block ul li:has(> ul) {
+  background-image: url("../images/filebrowsing_icon02.svg");
+  background-repeat: no-repeat;
+  background-position: left 10px;
+  background-size: 20px;
 }
 
 @media print {
