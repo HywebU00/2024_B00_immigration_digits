@@ -2185,7 +2185,7 @@ kbd kbd {
 
 .disabled,
 [disabled] {
-  opacity: 0.5;
+  opacity: 0.4;
   cursor: not-allowed !important;
   text-shadow: none;
   box-shadow: none !important;
@@ -10545,31 +10545,43 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 .react-calendar .react-calendar__navigation .react-calendar__navigation__label {
   background-color: transparent;
   padding: 0;
-  margin: 0;
+  margin: 22px 0 0;
   border: none;
 }
 .react-calendar .react-calendar__navigation .react-calendar__navigation__label:focus {
   box-shadow: none;
 }
 .react-calendar .react-calendar__navigation .react-calendar__navigation__label .react-calendar__navigation__label__labelText--from {
-  font-size: 1.75em;
+  font-size: 1.375em;
   color: #333;
   font-weight: 500;
   line-height: 1em;
   background-color: #fff;
-  padding: 0 0.5em 0.1em;
+  padding: 0.2em 1em;
   border-radius: 8px;
   position: relative;
   transition: 0.5s;
+  margin-top: 0.5em;
+  position: relative;
 }
 .react-calendar .react-calendar__navigation .react-calendar__navigation__label .react-calendar__navigation__label__labelText--from:hover {
   background-color: #ddd;
+}
+.react-calendar .react-calendar__navigation .react-calendar__navigation__label .react-calendar__navigation__label__labelText--from:after {
+  content: "";
+  border: 6px solid #333;
+  border-color: transparent #333 #333 transparent;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
 }
 .react-calendar .react-calendar__navigation .react-calendar__navigation__prev-button {
   background-color: transparent;
   padding: 0;
   margin: 0;
   border: none;
+  width: 56px;
+  height: 56px;
 }
 .react-calendar .react-calendar__navigation .react-calendar__navigation__prev-button:focus {
   box-shadow: none;
@@ -10581,8 +10593,10 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   font-size: 1.375rem;
   position: relative;
   color: #333;
-  padding: 16px 0 5px 70px;
+  padding: 0;
   font-weight: 500;
+  width: 56px;
+  height: 56px;
 }
 .react-calendar .react-calendar__navigation .react-calendar__navigation__prev-button .prev_btn:before {
   content: "";
@@ -10744,6 +10758,30 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 .react-calendar .react-calendar__month-view__days [disabled]:hover abbr {
   background-color: #003f7a;
   box-shadow: none;
+}
+.react-calendar .react-calendar__viewContainer {
+  margin-bottom: 1em;
+}
+.react-calendar .react-calendar__year-view__months {
+  justify-content: space-between;
+}
+.react-calendar .react-calendar__year-view__months__month {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 16% !important;
+  margin-bottom: 5px;
+  border: none;
+  color: #333;
+}
+@media (max-width: 840px) {
+  .react-calendar .react-calendar__year-view__months__month {
+    flex-basis: 24% !important;
+  }
+}
+@media (max-width: 620px) {
+  .react-calendar .react-calendar__year-view__months__month {
+    flex-basis: 32% !important;
+  }
 }
 
 .lightboxstyle {
