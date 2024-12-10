@@ -5216,6 +5216,7 @@ select::-ms-expand {
 .flex-form .form_grp .datepick {
   position: relative;
   display: flex;
+  align-items: center;
 }
 @media screen and (max-width: 575px) {
   .flex-form .form_grp .datepick {
@@ -5275,13 +5276,16 @@ select::-ms-expand {
 .flex-form .form_grp .datepick > input[type=text].time {
   padding-right: 0.5em;
 }
+.flex-form .form_grp .datepick span {
+  padding: 0 3px;
+}
 .flex-form .form_grp .form_title {
   color: #003260;
   font-weight: 600;
 }
 .flex-form .form_title {
-  max-width: 190px;
-  flex: 0 0 190px;
+  max-width: 200px;
+  flex: 0 0 200px;
   align-self: flex-start;
   padding: 0.65em 0.5em 0.65em 1em;
   font-weight: 500;
@@ -5304,8 +5308,8 @@ select::-ms-expand {
   }
 }
 .flex-form .form_title + .form_content[class*=form_col] {
-  flex-basis: calc(100% - 190px);
-  max-width: calc(100% - 190px);
+  flex-basis: calc(100% - 200px);
+  max-width: calc(100% - 200px);
   padding-top: 0;
 }
 @media screen and (max-width: 575px) {
@@ -5316,9 +5320,9 @@ select::-ms-expand {
 }
 .flex-form .form_content {
   display: flex;
-  max-width: calc(100% - 190px);
+  max-width: calc(100% - 200px);
   flex: auto;
-  flex-basis: calc(100% - 190px);
+  flex-basis: calc(100% - 200px);
   position: relative;
   min-height: 1px;
   flex-wrap: wrap;
