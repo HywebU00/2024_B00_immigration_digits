@@ -129,11 +129,13 @@
   .handlelogin_leftblock {
     flex: 0 0 auto;
     flex-basis: 49%;
+    max-width: 49%;
     // outline: 1px solid red;
   }
   .handlelogin_rightblock {
     flex: 0 0 auto;
     flex-basis: 48%;
+    max-width: 48%;
     // outline: 1px solid red;
     .form_title {
       max-width: 240px;
@@ -241,6 +243,7 @@
     .answer {
       color: #333;
       padding: 0.5em 0.5em 0.5em 2.5em;
+      overflow-wrap: break-word;
     }
   }
 }

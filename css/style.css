@@ -10140,10 +10140,12 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 .handlelogin_block .handlelogin_leftblock {
   flex: 0 0 auto;
   flex-basis: 49%;
+  max-width: 49%;
 }
 .handlelogin_block .handlelogin_rightblock {
   flex: 0 0 auto;
   flex-basis: 48%;
+  max-width: 48%;
 }
 .handlelogin_block .handlelogin_rightblock .form_title {
   max-width: 240px;
@@ -10241,6 +10243,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 .qa_group .qalist .answer {
   color: #333;
   padding: 0.5em 0.5em 0.5em 2.5em;
+  overflow-wrap: break-word;
 }
 
 .interviewdate_title {
