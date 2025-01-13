@@ -10122,6 +10122,10 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   justify-content: flex-end;
 }
 
+.comparison_chart .form_grp .form_title {
+  flex: 0 0 auto !important;
+}
+
 .backbtn {
   text-align: center;
   padding: 2em 0 0;
