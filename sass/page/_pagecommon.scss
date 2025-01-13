@@ -100,7 +100,7 @@
   padding: 0.5em 0;
   .btngroup {
     display: flex;
-    margin-bottom: 0.5em;
+    margin-bottom: 0em;
     .leftbtn {
       flex: 1 1 auto;
     }
@@ -112,6 +112,7 @@
   }
 }
 .comparison_chart {
+  margin: 0;
   .form_grp {
     .form_title {
       flex: 0 0 auto !important;
