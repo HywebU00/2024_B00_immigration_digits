@@ -206,13 +206,13 @@
   }
   .interviewee_title {
     flex: 0 0 auto;
-    flex-basis: 40px;
-    max-width: 40px;
+    flex-basis: 80px;
+    max-width: 80px;
   }
   .interviewee_content {
     flex: 1 0 auto;
-    flex-basis: calc(100% - 60px);
-    max-width: calc(100% - 6px);
+    flex-basis: calc(100% - 90px);
+    max-width: calc(100% - 90px);
   }
   @media (max-width: 1200px) {
     .interviewee_title,
