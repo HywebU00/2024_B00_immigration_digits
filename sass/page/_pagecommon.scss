@@ -859,6 +859,9 @@
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 99;
   font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   .overlay {
     position: fixed;
     top: 0;
@@ -868,12 +871,14 @@
   }
   .lightboxstyle_block {
     width: 80vh;
+    max-height: 80vh;
     position: relative;
-    padding: 2em 2.5em 1em;
+    padding: 2em 2.5em;
     margin: 30px auto;
     background-color: #fff;
     border-radius: 5px;
     box-sizing: border-box;
+    overflow: hidden;
   }
   .close {
     position: absolute;
@@ -906,6 +911,13 @@
   }
   .content {
     line-height: 1.25em;
+    max-height: calc(80vh - 150px); /* 減去標題和按鈕區高度 */
+    overflow-y: auto;
+    table {
+      td {
+        padding: 0.5em 0.7em;
+      }
+    }
   }
 }
 // loading
